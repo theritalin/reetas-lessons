@@ -13,6 +13,7 @@ export default function LessonList() {
 
   useEffect(() => {
     const initialize = async () => {
+    //  console.log(`Courses: ${courses}`);
       if (contract && account) {
         await checkUserRegistration();
       }
@@ -48,9 +49,9 @@ export default function LessonList() {
 
   const hasCompletedLesson = (lessonOrder) => {
     if (!userInfo || !userInfo[5]) return false; // userInfo ve userInfo[4] kontrolü
-    console.log(`order: ${lessonOrder}`);
-    console.log(`user: ${userInfo}`);
-    console.log(`user: ${userInfo[5]}`);
+    ///console.log(`order: ${lessonOrder}`);
+   // console.log(`user: ${userInfo}`);
+   // console.log(`user: ${userInfo[5]}`);
 
     return (
       Array.isArray(userInfo[5]) &&
